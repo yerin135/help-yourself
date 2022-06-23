@@ -7,12 +7,23 @@ import { model } from '@tensorflow/tfjs';
 import { setSourceMapRange, setSyntheticTrailingComments } from 'typescript';
 import { cursorTo } from 'readline';
 
+const Box = styled.div`
+  width: 100%;
+  height: 100%;
+  /* background-color: #f8f9fa; */
+  display : flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+`;
 const Container = styled.div`
   font-size: 1.2rem;
+  /* background-color: #f8f9fa; */
 `;
 
 const Title = styled.div`
   align-items: center;
+  text-align: center;
   font-family: 'Gravity Handwritten Regular';
   color: #b197fc;
   font-size: 8rem;
@@ -24,8 +35,11 @@ const Webcam = styled.div`
 `;
 
 const Label = styled.div`
+  color: #757474;
+  text-align: center;
+  font-size: 2rem;
   line-height: 2rem;
-  font-weight: 300;
+  font-weight: 500;
 `;
 
 
@@ -40,7 +54,7 @@ function App() {
   useEffect(() => {
     if (initialized.current) return;
     initialized.current = true;
-    const URL = "https://teachablemachine.withgoogle.com/models/cVizOguBV/";
+    const URL = "https://teachablemachine.withgoogle.com/models/ww_5-NIwB/";
 
     let model: tmImage.CustomMobileNet;
     let maxPredictions: number;
@@ -131,7 +145,7 @@ const maxClass = scores?.reduce((prev, curr) =>
 )
 
   return (
-    <div className="App">
+    <Box>
       <header className="App-header">
         <Title>
           Help Yourself
@@ -157,7 +171,7 @@ const maxClass = scores?.reduce((prev, curr) =>
           </Label>
         </Container>
       </header>
-    </div>
+    </Box>
   );
 }
 
