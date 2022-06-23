@@ -35,9 +35,10 @@ const Webcam = styled.div`
 `;
 
 const Label = styled.div`
-  color: #757474;
+  /* font-family: 'Montserrat'; */
+  color: #979797;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 2rem;
   font-weight: 500;
 `;
