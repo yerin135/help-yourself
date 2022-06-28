@@ -123,22 +123,9 @@ function App() {
         lastPrediction = mmm.className;
         lastPredictedAt = new Date();
       }
-      
-
-      // max(prediction.probability)
-      // if(prediction[0].probability > 0.5 ){
-      //   console.log('choco');
-        
-      // }
-      // for (let i = 0; i < maxPredictions; i++) {
-      //         prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-      //     labelContainerEl.current!.children[i].innerHTML = classPrediction;
-      // }
   }
     
   init();
-  // loop2();
-  // loop();
   }, []);
 
 const maxClass = scores?.reduce((prev, curr) => 
@@ -160,14 +147,9 @@ const maxClass = scores?.reduce((prev, curr) =>
           </Webcam>
           <Label>
           <div>
-              {/* {scores?.map(({className, probability}) => ( */}
               <div>
-                {/* <div>{className}</div>
-                <div>{probability.toFixed(2)}</div> */}
                 <div>{maxClass?.className}</div>
               </div>
-            {/* )) */}
-            {/* } */}
           </div>
           </Label>
         </Container>
